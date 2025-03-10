@@ -1,0 +1,67 @@
+@use '../../styles/abstract/breakpoints' as*;
+
+.headerMain{
+    display: flex;
+    width: 100%;
+
+    &_components{
+        display: flex;
+        width: 100%;
+        padding: 1.5rem 6rem;
+
+        @include mb{
+            padding: 1rem;
+        }
+        @include tb{
+            padding: 1.5rem 3rem;
+        }
+        .leftSection{
+            display: flex;
+        }
+        .middleSection{
+            display: flex;
+            margin-left: 5rem;
+            width: 100%;
+            padding-left: 3rem;
+            @include tb{
+                display: none;
+            }
+            @include mb{
+                display: none;
+            }
+            nav{
+                display: flex;
+                gap: 2.25rem;
+                align-items: center;
+
+                li{
+                    list-style: none;
+                    color: #525252;
+                    font-weight: 550;
+                    transition: color 300ms ease-in-out;
+                    &:hover{
+                        color: #171717	;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .rightSection{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            width: 100%;
+            gap: .75rem;
+
+            svg{
+                color:#525252;
+                transition: color 300ms ease-in-out;
+                &:hover{
+                    cursor: pointer;
+                    color: black;
+                }
+            }
+        }
+    }
+}
